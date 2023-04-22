@@ -4,13 +4,14 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
+import static java.util.Objects.*;
+
 public class ImperativeExamples {
     private static final List<Integer> INTEGER_LIST = List.of(3, 2, 12, 5, 6, 11, 13);
     private static final List<String> FRUIT_LIST = List.of("Apple", "Orange", "Banana");
 
     public static void main(String[] args) {
-        var myObject = new ImperativeExamples();
-        myObject.run();
+        run();
     }
 
     public static void run() {
@@ -73,7 +74,7 @@ public class ImperativeExamples {
     private static void findSubDirectories() {
         System.out.printf("\n=== findSubDirectories ===%n");
         List<String> allDirNames = new ArrayList<>();
-        for (File file : new File("/tmp").listFiles()) {
+        for (File file : requireNonNull(new File("/tmp").listFiles())) {
             if (file.isDirectory()) {
                 allDirNames.add(file.getName());
             }

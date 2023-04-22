@@ -12,10 +12,7 @@ public class DeclarativeExamples {
     private static final List<Integer> INTEGER_LIST = List.of(3, 2, 12, 5, 6, 11, 13);
     private static final List<String> FRUIT_LIST = List.of("Apple", "Orange", "Banana");
 
-    public DeclarativeExamples() {}
-
     public static void main(String[] args) {
-        var myObject = new DeclarativeExamples();
         run();
     }
 

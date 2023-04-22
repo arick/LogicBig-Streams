@@ -28,7 +28,7 @@ public class LimitExamples {
         System.out.println("Running without limit()");
 
         //filter even numbers
-        stream.filter(currentInteger -> isAnEvenNumber(currentInteger))
+        stream.filter(LimitExamples::isAnEvenNumber)
               .forEach(System.out::println);
     }
 
@@ -36,7 +36,7 @@ public class LimitExamples {
         int limit = 2;
         System.out.println("Running with limit of " + limit);
         //filter even numbers
-        stream.filter(currentInteger -> isAnEvenNumber(currentInteger))
+        stream.filter(LimitExamples::isAnEvenNumber)
               .limit(2)
               .forEach(System.out::println);
     }
@@ -44,7 +44,7 @@ public class LimitExamples {
     private static void runWithAnIterator1() {
         System.out.println("Running with Iterator(1)");
         Stream<Integer> stream = Stream.iterate(1, currentInteger -> currentInteger + 1);
-        stream.filter(currentInteger -> isAnEvenNumber(currentInteger))
+        stream.filter(LimitExamples::isAnEvenNumber)
               .limit(MAX_SIZE)
               .forEach(System.out::println);
     }
@@ -53,7 +53,7 @@ public class LimitExamples {
         System.out.println("Running with Iterator(2)");
         Stream<Integer> stream = Stream.iterate(1, currentInteger -> currentInteger + 1);
         stream.limit(MAX_SIZE)
-              .filter(currentInteger -> isAnEvenNumber(currentInteger))
+              .filter(LimitExamples::isAnEvenNumber)
               .forEach(System.out::println);
     }
 
@@ -62,7 +62,7 @@ public class LimitExamples {
     }
 
     public Stream<Integer> streamOf(List<Integer> integerList) {
-        return integerList == null || integerList.isEmpty() ? Stream.empty() : integerList.stream();
+        return ((integerList == null) || integerList.isEmpty()) ? Stream.empty() : integerList.stream();
     }
 }
 
