@@ -1,4 +1,4 @@
-package com.logicbig.example;
+package org.arick.streams;
 
 import java.util.stream.IntStream;
 
