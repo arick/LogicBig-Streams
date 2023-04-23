@@ -13,6 +13,7 @@
         <module>stream-short-circuiting</module>
         <module>stream-ordering-examples</module>
         <module>streams-refactored</module>
+        <module>streamfull-behavioral-parameter</module>
     </modules>
 
     <properties>
