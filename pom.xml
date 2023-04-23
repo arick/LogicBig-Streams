@@ -14,6 +14,7 @@
         <module>stream-ordering-examples</module>
         <module>streams-refactored</module>
         <module>streamfull-behavioral-parameter</module>
+        <module>streams-side-effect</module>
     </modules>
 
     <properties>
