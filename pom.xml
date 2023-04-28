@@ -16,6 +16,7 @@
         <module>streamfull-behavioral-parameter</module>
         <module>streams-side-effect</module>
         <module>streams-reduce-examples</module>
+        <module>streams-collect-examples</module>
     </modules>
 
     <properties>
